@@ -1,25 +1,17 @@
-#include "main.h"
-#include <stdio.h>
+#include <unistd.h>
+
 
 /**
- * more_numbers - Function to print numbers 0-14 ten times
- *
- * Return: void
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ * Return: On success 1.
  */
 
-void more_numbers(void)
-{
-	int i, j;
+int _putchar(char c)
 
-	for (i = 0; i < 10; i++)
-	{
-		for (j = 0; j <= 14; j++)
-		{
-			if (j >= 10)
-				_putchar('1');
-			_putchar(j % 10 + '0');
-		}
-		_putchar('\n');
-	}
+{
+
+	return (write(1, &c, 1));
+
 }
 
